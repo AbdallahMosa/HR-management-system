@@ -8,6 +8,8 @@ var minJunior	=500;
 var msxJunior	=1000;
 
 const  objGhazi ={ employeeID : function(){
+    
+    
     return idCont 
 } ,
     fullName : "Ghazi Samer" ,
@@ -19,7 +21,7 @@ const  objGhazi ={ employeeID : function(){
         var seniorSalary = Math.floor(Math.random() * (maxSenior - minSenior) ) + minSenior;
         var netSalary = seniorSalary-seniorSalary*0.075;
 
-        return netSalary
+        return Math.ceil(netSalary);
       }
     }
    
@@ -38,7 +40,7 @@ const objLana={ employeeID : function(){
         var seniorSalary = Math.floor(Math.random() * (maxSenior - minSenior) ) + minSenior;
         var netSalary = seniorSalary-seniorSalary*0.075;
 
-        return netSalary
+        return Math.ceil(netSalary);
       },    
     }  
 
@@ -55,7 +57,7 @@ const objTamara ={ employeeID : function(){
         var seniorSalary = Math.floor(Math.random() * (maxSenior - minSenior) ) + minSenior;
         var netSalary = seniorSalary-seniorSalary*0.075;
 
-        return netSalary
+        return Math.ceil(netSalary);
       },
 
 };
@@ -72,7 +74,7 @@ const objSafi ={  employeeID : function(){
              var netSalary = midSeniorSalary-midSeniorSalary*0.075
 
 
-        return netSalary
+             return Math.ceil(netSalary);
       },
 
 };
@@ -87,7 +89,7 @@ const objOmar ={ employeeID : function(){
         var seniorSalary = Math.floor(Math.random() * (maxSenior - minSenior) ) + minSenior;
         var netSalary = seniorSalary-seniorSalary*0.075;
 
-        return netSalary
+        return Math.ceil(netSalary);
       },
 
 };
@@ -102,7 +104,7 @@ const objRana ={  employeeID : function(){
 
         var juniorSalary = Math.floor(Math.random() * (msxJunior - minJunior) ) + minJunior;
         var netSalary =  juniorSalary-juniorSalary*0.075;
-        return netSalary
+        return Math.ceil(netSalary);
       },
 };
 
@@ -118,7 +120,7 @@ const objHadi ={ employeeID : function(){
         var midSeniorSalary = Math.floor(Math.random() * (msxMidSenior - minMidSenior) ) + minMidSenior;
         var netSalary = midSeniorSalary-midSeniorSalary*0.075;
 
-        return netSalary
+        return Math.ceil(netSalary);
       },
 };
 console.log("Employee name: "+ objGhazi.fullName)
