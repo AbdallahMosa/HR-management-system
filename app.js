@@ -6,7 +6,9 @@ var minMidSenior=1000;
 var msxMidSenior=1500;
 var minJunior	=500;
 var msxJunior	=1000;
-
+const body = document.getElementsByTagName("body");
+const divOut = document.getElementById("divOut")
+body[0].appendChild(divOut)
 function Users (fullName,department,level,imageURL,minSalary,maxSalary ){
     this.employeeID= function(){
        var counter=idCont
@@ -23,19 +25,48 @@ function Users (fullName,department,level,imageURL,minSalary,maxSalary ){
         return Math.ceil(netSalary);}
       }
 Users.prototype.render = function (){
-    document.write(`<p>The Employee ID : ${this.employeeID()}</p>`,)
-    document.write(`<p>The Employee name : ${this.fullName}</p>`,)
-    document.write(`<p>Department : ${this.department}</p>`,)
-    document.write(`<p>Employee Salary : ${this.salary(minSenior,maxSenior)}</p>`,)
-    document.write(`<p>----------------------------------------------------------</p>`,)
-}
-const Ghazi = new Users("Ghazi Samer","Administration","Senior","./p.p1.jpg",minSenior,maxSenior);
-const Lana = new Users("Lana Ali","Finance","Senior","./lena.jpg",minSenior,maxSenior)
+
+
+   const divE1 = document.createElement("div");
+   divOut.appendChild(divE1)
+   divE1.id="card";
+   const pE1 = document.createElement("p")
+   divE1.appendChild(pE1);
+   const pE2 = document.createElement("p")
+   divE1.appendChild(pE2)
+   const pE3 = document.createElement("p")
+   divE1.appendChild(pE3);
+   const pE4 = document.createElement("p")
+   divE1.appendChild(pE4);
+   const pE5 = document.createElement("p")
+   divE1.appendChild(pE5);
+  const imgE1 = document.createElement("img");
+   imgE1.src = this.imageURL;
+   imgE1.alt = this.fullName;
+   divE1.appendChild(imgE1),
+   pE1.textContent =`Employee Name : ${this.fullName}`
+    pE2.textContent= `Employee ID : ${this.employeeID()}`
+    pE3.textContent= `Department : ${this.department}`
+    pE4.textContent= `level : ${this.level}`
+    pE5.textContent= `Salary : ${this.salary()}`
+   
+   
+{}}
+    // document.write(`<p>The Employee ID : ${this.employeeID()}</p>`,)
+    // document.write(`<p>The Employee name : ${this.fullName}</p>`,)
+    // document.write(`<p>Department : ${this.department}</p>`,)
+    // document.write(`<p>Employee Salary : ${this.salary(minSenior,maxSenior)}</p>`,)
+    // document.write(`<p>----------------------------------------------------------</p>`,)
+
+
+
+const Ghazi = new Users("Ghazi Samer","Administration","Senior","./Ghazi.jpg",minSenior,maxSenior);
+const Lana = new Users("Lana Ali","Finance","Senior","./Lana.jpg",minSenior,maxSenior)
 const Tamara = new Users(" Tamara Ayoub","Marketing","Senior","./Tamara.jpg",minSenior,maxSenior)
-const Safi = new Users("Safi Walid","Administration","Mid-Senior","./safi.jpg",minMidSenior,msxMidSenior)
-const Omar = new Users("Omar Zaid" ,"Development","Senior","./omar.jpg",minSenior,maxSenior)
-const Rana = new Users("Rana Saleh","Development","Junior","./rana.jpg",minJunior,msxJunior)
-const Hadi = new Users("Hadi Ahmad","Finance","Mid-Senior","./hadi.jpg",minMidSenior,msxMidSenior)
+const Safi = new Users("Safi Walid","Administration","Mid-Senior","./Safi.jpg",minMidSenior,msxMidSenior)
+const Omar = new Users("Omar Zaid" ,"Development","Senior","./Omar.jpg",minSenior,maxSenior)
+const Rana = new Users("Rana Saleh","Development","Junior","./Rana.jpg",minJunior,msxJunior)
+const Hadi = new Users("Hadi Ahmad","Finance","Mid-Senior","./Hadi.jpg",minMidSenior,msxMidSenior)
 Ghazi.render();
 Lana.render();
 Tamara.render();

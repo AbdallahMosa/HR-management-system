@@ -1,0 +1,48 @@
+header {
+
+    color: brown;
+    width: 100%;
+    padding: 20px 100px; 
+    display: flex; 
+   
+    
+}
+ nav{
+    display: flex;
+    gap: 50px;
+ }
+body{
+    line-height: 1.5 ;
+background-image: url(https://previews.123rf.com/images/spaintervfx/spaintervfx1703/spaintervfx170300047/75210983-orange-blue-background-with-html-code.jpg);
+margin:auto;
+ba
+
+}
+#divOut{
+display: flex;
+width: 960px;
+margin: auto;
+gap: 50px;
+flex-wrap: wrap;
+}
+
+
+#card {
+    font-size: large;
+    flex: 1 1 20%;
+        color: chartreuse;
+}
+img {
+    width: 150px;
+    height: 150px;
+    margin: auto
+    
+}
+footer{
+    font-size: 40px;
+    width: 100%;
+    height: 10vh;
+    color: chartreuse;
+   
+    justify-content: center;
+}
