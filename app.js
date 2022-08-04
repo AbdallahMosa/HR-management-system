@@ -7,8 +7,12 @@ var msxMidSenior=1500;
 var minJunior	=500;
 var msxJunior	=1000;
 
-function Users (employeeID,fullName,department,level,imageURL,minSalary,maxSalary ){
-    this.employeeID= employeeID ;
+function Users (fullName,department,level,imageURL,minSalary,maxSalary ){
+    this.employeeID= function(){
+       var counter=idCont
+       idCont++
+        return counter;
+    } ;
     this.fullName = fullName;
     this.department = department;
     this.level = level;
@@ -19,19 +23,19 @@ function Users (employeeID,fullName,department,level,imageURL,minSalary,maxSalar
         return Math.ceil(netSalary);}
       }
 Users.prototype.render = function (){
-
+    document.write(`<p>The Employee ID : ${this.employeeID()}</p>`,)
     document.write(`<p>The Employee name : ${this.fullName}</p>`,)
     document.write(`<p>Department : ${this.department}</p>`,)
     document.write(`<p>Employee Salary : ${this.salary(minSenior,maxSenior)}</p>`,)
     document.write(`<p>----------------------------------------------------------</p>`,)
 }
-const Ghazi = new Users(1000,"Ghazi Samer","Administration","Senior","./p.p1.jpg",minSenior,maxSenior);
-const Lana = new Users(1001,"Lana Ali","Finance","Senior","./lena.jpg",minSenior,maxSenior)
-const Tamara = new Users(1002," Tamara Ayoub","Marketing","Senior","./Tamara.jpg",minSenior,maxSenior)
-const Safi = new Users(1003,"Safi Walid","Administration","Mid-Senior","./safi.jpg",minMidSenior,msxMidSenior)
-const Omar = new Users(1004,"Omar Zaid" ,"Development","Senior","./omar.jpg",minSenior,maxSenior)
-const Rana = new Users(1005,"Rana Saleh","Development","Junior","./rana.jpg",minJunior,msxJunior)
-const Hadi = new Users(1006,"Hadi Ahmad","Finance","Mid-Senior","./hadi.jpg",minMidSenior,msxMidSenior)
+const Ghazi = new Users("Ghazi Samer","Administration","Senior","./p.p1.jpg",minSenior,maxSenior);
+const Lana = new Users("Lana Ali","Finance","Senior","./lena.jpg",minSenior,maxSenior)
+const Tamara = new Users(" Tamara Ayoub","Marketing","Senior","./Tamara.jpg",minSenior,maxSenior)
+const Safi = new Users("Safi Walid","Administration","Mid-Senior","./safi.jpg",minMidSenior,msxMidSenior)
+const Omar = new Users("Omar Zaid" ,"Development","Senior","./omar.jpg",minSenior,maxSenior)
+const Rana = new Users("Rana Saleh","Development","Junior","./rana.jpg",minJunior,msxJunior)
+const Hadi = new Users("Hadi Ahmad","Finance","Mid-Senior","./hadi.jpg",minMidSenior,msxMidSenior)
 Ghazi.render();
 Lana.render();
 Tamara.render();
